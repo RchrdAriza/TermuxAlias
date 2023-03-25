@@ -19,11 +19,10 @@ español() {
 
 distroES=$(dialog --clear --backtitle "Entorno" \
 		--title "Elige tu Entorno" \
-		--menu "Cual usas actualmente?" 10 40 2 \
+		--menu "Cual utiliza actualmente" 10 40 2 \
 		1 "Debian|Ubuntu|kali" \
 		2 "Termux" \
 		3>&1 1>&2 2>&3
-
 		)
 }
 
@@ -78,14 +77,14 @@ fi
 
 case $lang in
 
-		1) english
+		1) español
 			case $distroEN in
 				1) 	homeEN
 			esac
 		;;
 		2) español
 			case $distroES in
-				1) 	homeEN
+				1) 	homeES
 			esac
 		;;
 esac
