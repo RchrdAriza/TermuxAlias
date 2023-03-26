@@ -169,7 +169,7 @@ alias rep='sed -i'
 alias catn='cat -n'
 
 # Alias to show the Linux kernel version
-alias k='uname -r''
+alias k='uname -r'
 
 # Alias to create an empty file with a specific name and edit it in nano
 alias touchn='touch && nano'

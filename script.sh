@@ -6,6 +6,7 @@ source ShortCuts/debian_ubuntu/englishSC.sh
 source ShortCuts/termux/TermuxSpanishSC.sh
 source ShortCuts/termux/TermuxEnglish.sh
 
+apt install dialog
 
 lang=$(dialog --clear --backtitle "Lenguaje/Language" \
 	  --title "Elige tu idioma/Choose your Language" \
@@ -46,15 +47,13 @@ sleep 3
 shell=${SHELL: -4}
 
 
-echo -e "${shell} es el tipo"
 
 if [ "$shell" == "/zsh" ]; then
-
+	 
 	echo "Su tipo de shell es: ZSH"
 	atajoszsh
 
 elif [ "$shell" == "bash" ]; then
-
 	echo "Su tipo de shell es: BASH"
 	atajosbash
 fi
@@ -68,7 +67,7 @@ sleep 3
 
 shell=${SHELL: -4}
 
-echo -e "${shell} is the type"
+#echo -e "${shell} is the type"
 
 if [ "$shell" == "/zsh" ]; then
     echo "Your shell type is: ZSH"
@@ -80,18 +79,63 @@ elif [ "$shell" == "bash" ]; then
 fi
 }
 
+termuxmhomeES(){
+cd $HOME
+echo "Analizando el tipo de shell disponible"
+
+sleep 3
+
+shell=${SHELL: -4}
+
+
+echo -e "${shell} es el tipo"
+
+if [ "$shell" == "/zsh" ]; then
+
+	echo "Su tipo de shell es: ZSH"
+	zshSpanishSC
+
+elif [ "$shell" == "bash" ]; then
+
+	echo "Su tipo de shell es: BASH"
+	bashSpanishSC
+fi
+}
+
+termuxhomeEN(){
+cd $HOME
+echo "Analyzing available shell type"
+
+sleep 3
+
+shell=${SHELL: -4}
+
+echo -e "${shell} is the type"
+
+if [ "$shell" == "/zsh" ]; then
+    echo "Your shell type is: ZSH"
+	zhsEnglishtm
+
+elif [ "$shell" == "bash" ]; then
+    echo "Your shell type is: BASH"
+	bashSpanishSC
+    
+fi
+}
 
 
 case $lang in
 
 		1) english
 			case $distroEN in
-				1) 	homeEN
+				1) 	homeEN;;
+				2)  termuxhomeEN;;
 			esac
 		;;
 		2) español
 			case $distroES in
-				1) 	homeES
+				1) 	homeES;;
+				2)  termuxmhomeES;;
 			esac
 		;;
 esac

@@ -4,7 +4,7 @@
 
 bashSpanishSC() {
 	echo "
-	# Alias para instalar paquetes con apt-get
+# Alias para instalar paquetes con apt-get
 alias instalar='apt-get install'
 
 # Alias para desinstalar paquetes con apt-get
@@ -96,7 +96,7 @@ alias pagen='less'
 
 zshSpanishSC() {
 	echo "
-	# Alias para instalar paquetes con apt-get
+# Alias para instalar paquetes con apt-get
 alias instalar='apt-get install'
 
 # Alias para desinstalar paquetes con apt-get
