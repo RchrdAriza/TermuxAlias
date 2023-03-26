@@ -40,16 +40,20 @@ distroEN=$(dialog --clear --backtitle "Environment" \
 homeES(){
 cd $HOME
 echo "Analizando el tipo de shell disponible"
-shell=$SHELL
 
-#echo -e "${shell} es el tipo"
+sleep 3
 
-if [ "$shell" == "/usr/bin/zsh" ]; then
+shell=${SHELL: -4}
+
+
+echo -e "${shell} es el tipo"
+
+if [ "$shell" == "/zsh" ]; then
 
 	echo "Su tipo de shell es: ZSH"
 	atajoszsh
 
-elif [ "${shell}" == "/usr/bin/bash" ]; then
+elif [ "$shell" == "bash" ]; then
 
 	echo "Su tipo de shell es: BASH"
 	atajosbash
@@ -59,15 +63,18 @@ fi
 homeEN(){
 cd $HOME
 echo "Analyzing available shell type"
-shell=$SHELL
 
-#echo -e "${shell} is the type"
+sleep 3
 
-if [ "$shell" == "/usr/bin/zsh" ]; then
+shell=${SHELL: -4}
+
+echo -e "${shell} is the type"
+
+if [ "$shell" == "/zsh" ]; then
     echo "Your shell type is: ZSH"
 	zshshortcuts
 
-elif [ "${shell}" == "/usr/bin/bash" ]; then
+elif [ "$shell" == "bash" ]; then
     echo "Your shell type is: BASH"
     bashshortcuts
 fi
@@ -77,7 +84,7 @@ fi
 
 case $lang in
 
-		1) español
+		1) english
 			case $distroEN in
 				1) 	homeEN
 			esac

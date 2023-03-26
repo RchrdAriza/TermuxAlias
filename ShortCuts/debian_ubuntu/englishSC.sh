@@ -5,7 +5,6 @@
 bashshortcuts() {
 
 echo "
-#!/bin/bash
 
 # Alias to install packages with apt-get
 alias inst='sudo apt-get install'
@@ -100,7 +99,7 @@ alias pag='less'
 zshshortcuts() {
 
 echo "
-#!/bin/bash
+
 
 # Alias to install packages with apt-get
 alias inst='sudo apt-get install'
