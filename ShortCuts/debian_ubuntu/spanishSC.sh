@@ -1,7 +1,6 @@
 #!/bin/bash
 #!/bin/zsh
 
-
 rojo="\e[31m"
 #amarillo="\e[33m"
 verde='\e[32m'
@@ -10,19 +9,21 @@ fin="\e[0m"
 
 atajosbash() {
 
-clear
+	clear
 
-echo -e "${rojo}Iniciando proceso de copiado en el archivo de .bashrc${fin}"
+	echo -e "${rojo}Iniciando proceso de copiado en el archivo de .bashrc${fin}"
 
-clear
+	sleep 3
 
-echo "..."
+	echo "..."
 
-clear
+	sleep 3
 
-sleep 2
+	clear
 
-echo "
+	#sleep 2
+
+	echo "
 # Alias para instalar paquetes con apt-get
 alias instalar='sudo apt-get install'
 
@@ -106,26 +107,31 @@ alias his='history | grep'
 
 # Alias para mostrar el contenido de un archivo de manera paginada
 alias pagen='less'
-" >> .bashrc
+" >>.bashrc
 
-echo -e "${verde}Listo... Ya puede disfrutar de los atajos en la terminal${fin}"
+	echo -e "${verde}Listo... Ya puede disfrutar de los atajos en la terminal${fin}"
+
+	sleep 2
+
 }
 
 atajoszsh() {
 
-clear
+	clear
 
-echo -e "${rojo}Iniciando proceso de copiado en el archivo de .zshrc${fin}"
+	echo -e "${rojo}Iniciando proceso de copiado en el archivo de .zshrc${fin}"
 
-clear
+	sleep 3
 
-echo "..."
+	echo "..."
 
-clear
+	sleep 2
 
-sleep 2
+	clear
 
-echo "
+	#sleep 2
+
+	echo "
 # Alias para instalar paquetes con apt-get
 alias instalar='sudo apt-get install'
 
@@ -210,8 +216,10 @@ alias his='history | grep'
 # Alias para mostrar el contenido de un archivo de manera paginada
 alias pagen='less'
 
-" >> .zshrc
+" >>.zshrc
 
-echo -e "${verde}Listo... Ya puede disfrutar de los atajos en la terminal${fin}"
+	echo -e "${verde}Listo... Ya puede disfrutar de los atajos en la terminal${fin}"
+
+	sleep 2
 
 }

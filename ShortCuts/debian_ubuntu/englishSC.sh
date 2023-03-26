@@ -9,19 +9,21 @@ fin="\e[0m"
 
 bashshortcuts() {
 
-clear
+	clear
 
-echo -e "${rojo}starting copy process to .bashrc file${fin}"
+	echo -e "${rojo}starting copy process to .bashrc file${fin}"
 
-clear
+	sleep 3
 
-echo "..."
+	echo "..."
 
-clear
+	sleep 3
 
-sleep 2
+	clear
 
-echo "
+	#sleep 2
+
+	echo "
 # Alias to install packages with apt-get
 alias inst='sudo apt-get install'
 
@@ -109,27 +111,31 @@ alias sh='history | grep'
 # Alias to show file contents in a paged manner
 alias pag='less'
 
-" >> .bashrc
+" >>.bashrc
 
-echo -e "${verde}process finished... you can now enjoy your shortcuts in the terminal${fin}"
+	echo -e "${verde}process finished... you can now enjoy your shortcuts in the terminal${fin}"
+
+	sleep 2
 
 }
 
 zshshortcuts() {
 
-clear
+	clear
 
-echo -e "${rojo}starting copy process to .zshrc file${fin}"
+	echo -e "${rojo}starting copy process to .zshrc file${fin}"
 
-clear
+	sleep 2
 
-echo "..."
+	echo "..."
 
-clear
+	sleep 3
 
-sleep 2
+	clear
 
-echo "
+	#sleep 2
+
+	echo "
 
 # Alias to install packages with apt-get
 alias inst='sudo apt-get install'
@@ -218,8 +224,10 @@ alias sh='history | grep'
 # Alias to show file contents in a paged manner
 alias pag='less'
 
-" >> .zshrc
+" >>.zshrc
 
-echo -e "${verde}process finished... you can now enjoy your shortcuts in the terminal${fin}"
+	echo -e "${verde}process finished... you can now enjoy your shortcuts in the terminal${fin}"
+
+	sleep 2
 
 }
