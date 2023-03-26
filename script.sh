@@ -1,12 +1,25 @@
 #!/bin/bash
 #/bin/zsh
 
+rojo="\e[31m"
+#amarillo="\e[33m"
+verde='\e[32m'
+#azul="\e[34m"
+fin="\e[0m"
+
 source ShortCuts/debian_ubuntu/spanishSC.sh
 source ShortCuts/debian_ubuntu/englishSC.sh
 source ShortCuts/termux/TermuxSpanishSC.sh
 source ShortCuts/termux/TermuxEnglish.sh
 
-apt install dialog
+clear
+
+echo -e "${rojo}intalando paquetes necesarios"
+echo -e "installing necessary packages${fin}"
+
+sleep 2
+
+apt install dialog -y
 
 lang=$(dialog --clear --backtitle "Lenguaje/Language" \
 	  --title "Elige tu idioma/Choose your Language" \
@@ -14,6 +27,7 @@ lang=$(dialog --clear --backtitle "Lenguaje/Language" \
 	  1 "ingles/english" \
 	  2 "español/Spanish" \
 	  3>&1 1>&2 2>&3
+	  sleep 2
 )
 
 español() {
@@ -24,6 +38,7 @@ distroES=$(dialog --clear --backtitle "Entorno" \
 		1 "Debian|Ubuntu|kali" \
 		2 "Termux" \
 		3>&1 1>&2 2>&3
+		sleep 2
 		)
 }
 
@@ -34,13 +49,19 @@ distroEN=$(dialog --clear --backtitle "Environment" \
 		1 "Debian|Ubuntu|kali" \
 		2 "Termux" \
 		3>&1 1>&2 2>&3
+		sleep 2
 	)
 
 }
 
-homeES(){
+homeES() {
+clear
+
 cd $HOME
-echo "Analizando el tipo de shell disponible"
+
+echo -e "${rojo}Analizando el tipo de shell disponible${fin}"
+
+echo "..."
 
 sleep 3
 
@@ -50,18 +71,23 @@ shell=${SHELL: -4}
 
 if [ "$shell" == "/zsh" ]; then
 	 
-	echo "Su tipo de shell es: ZSH"
+	echo -e "Su tipo de shell es: ${verde}ZSH${fin}"
 	atajoszsh
 
 elif [ "$shell" == "bash" ]; then
-	echo "Su tipo de shell es: BASH"
+	echo -e "Su tipo de shell es: ${verde}BASH${fin}"
 	atajosbash
 fi
 }
 
 homeEN(){
+clear
+
 cd $HOME
+
 echo "Analyzing available shell type"
+
+echo "..."
 
 sleep 3
 
@@ -70,55 +96,67 @@ shell=${SHELL: -4}
 #echo -e "${shell} is the type"
 
 if [ "$shell" == "/zsh" ]; then
-    echo "Your shell type is: ZSH"
-	zshshortcuts
+    echo "Your shell type is: ${verde}ZSH${fin}"
+	#zshshortcuts
 
 elif [ "$shell" == "bash" ]; then
-    echo "Your shell type is: BASH"
-    bashshortcuts
+    echo "Your shell type is: ${verde}BASH${fin}"
+    #bashshortcuts
 fi
 }
 
 termuxmhomeES(){
+clear
+
 cd $HOME
+
 echo "Analizando el tipo de shell disponible"
+
+echo "..."
 
 sleep 3
 
 shell=${SHELL: -4}
 
 
-echo -e "${shell} es el tipo"
+#echo -e "${shell} es el tipo"
 
 if [ "$shell" == "/zsh" ]; then
 
-	echo "Su tipo de shell es: ZSH"
-	zshSpanishSC
+	echo -e "Su tipo de shell es: ${verde}ZSH${fin}"
+	#zshSpanishSC
 
 elif [ "$shell" == "bash" ]; then
 
-	echo "Su tipo de shell es: BASH"
-	bashSpanishSC
+	echo -e "Su tipo de shell es: ${verde}BASH${fin}"
+	#bashSpanishSC
 fi
 }
 
 termuxhomeEN(){
+clear
+
 cd $HOME
+
 echo "Analyzing available shell type"
 
-sleep 3
+echo "..."
+
+sleep 2
 
 shell=${SHELL: -4}
 
-echo -e "${shell} is the type"
+#echo -e "${shell} is the type"
 
 if [ "$shell" == "/zsh" ]; then
-    echo "Your shell type is: ZSH"
-	zhsEnglishtm
+
+    echo -e "Your shell type is: ${verde}ZSH${fin}"
+	#zhsEnglishtm
 
 elif [ "$shell" == "bash" ]; then
-    echo "Your shell type is: BASH"
-	bashSpanishSC
+
+    echo -e "Your shell type is: ${verde}BASH${fin}"
+	#bashSpanishSC
     
 fi
 }
