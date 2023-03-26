@@ -54,7 +54,7 @@ distroEN=$(dialog --clear --backtitle "Environment" \
 
 }
 
-homeES() {
+homeES(){
 clear
 
 cd $HOME
@@ -97,11 +97,11 @@ shell=${SHELL: -4}
 
 if [ "$shell" == "/zsh" ]; then
     echo "Your shell type is: ${verde}ZSH${fin}"
-	#zshshortcuts
+	zshshortcuts
 
 elif [ "$shell" == "bash" ]; then
     echo "Your shell type is: ${verde}BASH${fin}"
-    #bashshortcuts
+    bashshortcuts
 fi
 }
 
@@ -124,12 +124,12 @@ shell=${SHELL: -4}
 if [ "$shell" == "/zsh" ]; then
 
 	echo -e "Su tipo de shell es: ${verde}ZSH${fin}"
-	#zshSpanishSC
+	zshSpanishSC
 
 elif [ "$shell" == "bash" ]; then
 
 	echo -e "Su tipo de shell es: ${verde}BASH${fin}"
-	#bashSpanishSC
+	bashSpanishSC
 fi
 }
 
@@ -151,12 +151,12 @@ shell=${SHELL: -4}
 if [ "$shell" == "/zsh" ]; then
 
     echo -e "Your shell type is: ${verde}ZSH${fin}"
-	#zhsEnglishtm
+	zhsEnglishtm
 
 elif [ "$shell" == "bash" ]; then
 
     echo -e "Your shell type is: ${verde}BASH${fin}"
-	#bashSpanishSC
+	bashSpanishSC
     
 fi
 }
