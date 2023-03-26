@@ -1,9 +1,25 @@
 #!/bin/bash
 #!/bin/zsh
 
-
+rojo="\e[31m"
+#amarillo="\e[33m"
+verde='\e[32m'
+#azul="\e[34m"
+fin="\e[0m"
 
 bashEnglishtm() { 
+
+clear
+
+echo -e "${rojo}starting copy process to .bashrc file${fin}"
+
+clear
+
+echo "..."
+
+clear
+
+sleep 2
 
 echo "
 # Alias to install packages with apt-get
@@ -93,10 +109,27 @@ alias sh='history | grep'
 # Alias to show file contents in a paged manner
 alias pag='less'
 " >> .bashrc
+
+echo -e "${verde}process finished... you can now enjoy your shortcuts in the terminal${fin}"
+
 }
 
 zhsEnglishtm(){
-	echo "# Alias to install packages with apt-get
+
+clear
+
+echo -e "${rojo}starting copy process to .zshrc file${fin}"
+
+clear
+
+echo "..."
+
+clear
+
+sleep 2
+
+	echo "
+# Alias to install packages with apt-get
 alias inst='apt-get install'
 
 # Alias to uninstall packages with apt-get
@@ -182,4 +215,7 @@ alias sh='history | grep'
 
 # Alias to show file contents in a paged manner
 alias pag='less'" >> .zshrc 
+
+echo -e "${verde}process finished... you can now enjoy your shortcuts in the terminal${fin}"
+
 }

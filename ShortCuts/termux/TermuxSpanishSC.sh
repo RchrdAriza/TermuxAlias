@@ -1,8 +1,26 @@
 #!/bin/bash
 #!/bin/zsh
 
+rojo="\e[31m"
+#amarillo="\e[33m"
+verde='\e[32m'
+#azul="\e[34m"
+fin="\e[0m"
 
 bashSpanishSC() {
+
+clear
+
+echo -e "${rojo}Iniciando proceso de copiado en el archivo de .bashrc${fin}"
+
+clear
+
+echo "..."
+
+clear
+
+sleep 2
+
 	echo "
 # Alias para instalar paquetes con apt-get
 alias instalar='apt-get install'
@@ -91,10 +109,26 @@ alias his='history | grep'
 # Alias para mostrar el contenido de un archivo de manera paginada
 alias pagen='less'
 
-	" >> ,bashrc
+" >> ,bashrc
+
+echo -e "${verde}Listo... Ya puede disfrutar de los atajos en la terminal${fin}"
+
 }
 
 zshSpanishSC() {
+
+clear
+
+echo -e "${rojo}Iniciando proceso de copiado en el archivo de .zshrc${fin}"
+
+clear
+
+echo "..."
+
+clear
+
+sleep 2
+
 	echo "
 # Alias para instalar paquetes con apt-get
 alias instalar='apt-get install'
@@ -183,5 +217,8 @@ alias his='history | grep'
 # Alias para mostrar el contenido de un archivo de manera paginada
 alias pagen='less'
 
-	" >> .zshrc
+" >> .zshrc
+
+echo -e "${verde}Listo... Ya puede disfrutar de los atajos en la terminal${fin}"
+
 }
