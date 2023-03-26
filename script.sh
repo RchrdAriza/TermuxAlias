@@ -1,5 +1,5 @@
 #!/bin/bash
-#/bin/zsh
+#!/bin/zsh
 
 rojo="\e[31m"
 #amarillo="\e[33m"
