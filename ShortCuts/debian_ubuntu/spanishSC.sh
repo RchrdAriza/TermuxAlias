@@ -62,9 +62,9 @@ alias c='clear'
 # Alias para mostrar los procesos en ejecución
 alias p='ps aux'
 
-# Alias para mostrar el tamaño de archivos y directorios en el directorio actual
-alias duh='du -h --max-depth=1'xit'
-alias xx='chmod +x
+# Alias para otorgar permiso de ejecucion
+alias xx='chmod +x'
+
 # Alias para mostrar el espacio libre en disco
 alias dfh='df -h'
 
@@ -153,9 +153,9 @@ alias c='clear'
 # Alias para mostrar los procesos en ejecución
 alias p='ps aux'
 
-# Alias para mostrar el tamaño de archivos y directorios en el directorio actual
-alias duh='du -h --max-depth=1'xit'
+# Alias para otorgar permisos de ejecucion
 alias xx='chmod +x
+
 # Alias para mostrar el espacio libre en disco
 alias dfh='df -h'
 
