@@ -111,7 +111,7 @@ alias his='history | grep'
 # Alias para mostrar el contenido de un archivo de manera paginada
 alias pagen='less'
 
-" >>,bashrc
+" >>.bashrc
 
 	echo -e "${verde}Listo... Ya puede disfrutar de los atajos en la terminal${fin}"
 
