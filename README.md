@@ -14,7 +14,7 @@
 ---
 para realizar la instalacion se nesecita clonar el repositorio haciendo uso de la herramienta *Git* con el siguiente comando
 ```
-git clone https://github.com/RchrdAlv/nvim-config
+git clone https://github.com/RchrdAriza/TermuxAlias
 ```
 En caso de no tener la herramienta _Git_ usar:
 ```shell 
